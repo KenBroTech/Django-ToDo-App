@@ -15,7 +15,7 @@
     <div class="border bg-muted p-3 mb-3">
         <p> <small>{{ todo.date_created }}</small></p>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-8">
                 {% if todo.complete == True %}
                 <p><span class="btn btn-success btn-sm mr-2"><i class="far fa-check-circle"></i>
                     </span></i>{{ todo.content }}</p>
@@ -23,7 +23,7 @@
                 <p>{{ todo.content }}</p>
                 {% endif %}
             </div>
-            <div class="col-md-4">
+            <div>
                 <a class="btn btn-info btn-sm mx-1" href="{% url 'todos-update' todo.id %}">Edit</a>
                 <a class="btn btn-danger btn-sm mx-1" href="{% url 'todos-delete' todo.id %}">Delete</a>
             </div>
